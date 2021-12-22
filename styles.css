@@ -1,0 +1,233 @@
+body{
+    background-color: black;
+    font-family: 'DM Sans' ;
+}
+.btn{
+    background-color: #ff6600;
+    position: fixed;
+    border: 1%;
+    bottom: 1%;
+    right: 5%;
+    border-radius: 50%;
+    font-size: 30px;
+    color: white;
+}
+.container{
+    padding: 0;
+    position: fixed;
+    bottom: 1%;
+    right: 5%;
+    background-color: white;
+    min-height: 629px;
+    width: 416px;
+    border-radius: 20px;
+    opacity: 0;
+    transform: translateY(100%);
+
+}
+@keyframes floatIn {
+    0%{
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    75%{
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+@keyframes floatOut {
+    0%{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+    75%{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(100%);
+    }
+}
+.top-bar{
+    min-height: 278px;
+    background: white;
+    margin: 0;
+    padding: 20px 5px 5px 30px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+.container-active .top-bar{
+    animation-name: top-bar-animation;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+}
+@keyframes top-bar-animation {
+    from {background: white;}
+    to {background:linear-gradient(123.75deg, #F5821F 1.87%, #FF5C00 120.46%)}
+  }
+.top-bar-content{
+   opacity:0;
+   animation:  fadeIn;
+   animation-duration: 3s;
+   animation-delay: 1s;
+   animation-fill-mode: forwards;
+   transition-timing-function: ease-out;
+   color: white;
+}
+span.iris {
+    font-weight: 700;
+    font-size: 30px;
+}
+span.hello {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+i.fa.fa-times {
+    margin-left: 78%;
+    font-weight: 100;
+    font-size: medium;
+}
+.top-bar-content p {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 23px;
+}
+i.robot-container {
+    background: #ff6600;
+    border-radius: 50%;
+    font-size: 25px;
+    text-align: center;
+    margin-right: 11px;
+    display: inline-block;
+    padding: 14px;
+    width: 67px;
+    height: 67px;
+    box-shadow: 0px -2px 17px -6px rgb(0 0 0 / 75%);
+}
+}
+img.robot-icon {
+    display: block;
+}
+.robot-icon {
+    width: 37px;
+}
+.bot-text {
+    background: white;
+    border: 1px solid #e4e4e4;
+    height: 400px;
+    width: 390px;
+    margin-top: -18%;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+    visibility: hidden;
+    animation-name: bot-text-animation;
+    animation-duration: 4s;
+    animation-delay: 6s;
+    animation-fill-mode: forwards;
+}
+@keyframes bot-text-animation {
+    from {visibility: hidden;}
+    to {visibility: visible;}
+  }
+.bot-text p {
+    padding-top: 40px;
+    padding-left: 23px;
+    font-weight: 500;
+}
+.bot-text ul {
+    margin: 0 10px;
+    margin-bottom: 20px;
+    padding: 0px;
+    padding: 0 10px;
+    margin-bottom: 30px;
+}
+.bot-text li {
+    height: 50px;
+    width: 339px;
+    font-size: 12px;
+    font-weight: 400;
+    border: 1px solid #e1e1e1;
+    padding: 10px;
+    border-radius: 8px;
+    list-style: none;
+    line-height: 26px;
+    margin-bottom: 8px;
+    opacity: 0;
+    animation: fadeIn ease-out 5s forwards;
+    cursor: pointer;
+}
+.bot-text li:nth-child(1){animation-delay: 3s;}
+.bot-text li:nth-child(2){animation-delay: 5s;}
+.bot-text li:nth-child(3){animation-delay: 7s;}
+.bot-text li:nth-child(4){animation-delay: 9s;margin-bottom:25px ;}
+.bot-text li:nth-child(5){animation-delay: 11s; border: none;}
+
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    75%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.bot-text a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 30px;
+    border-radius: 100px;
+    margin-left: 16%;
+    border: 1px solid #d1d1d1;
+    box-shadow: 0px 4px 5px rgb(0 0 0 / 10%);
+}
+i.fa.fa-circle {
+    color: #ff6600;
+    padding: 4px;
+    background: #ffe0cc;
+    border-radius: 50%;
+    margin-right: 3px;
+    font-size: 10px;
+}
+i.fa.fa-question {
+    color: #ff6600;
+    margin-left: 14px;
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    border-radius: 50%;
+    padding: 5px;
+    background: #ffe0cc;.
+}
+i.fa.fa-comments{
+    margin-right: 3px;
+}
+@media screen and (max-width:600px) {
+    .container{
+        width: 100%;
+        border-radius: 0px;
+        right: 0;
+    }
+    .top-bar{
+        border-radius: 0px;
+    }
+    .bot-text{
+        min-width: 350px;
+    }
+    .bot-text li{
+        width: 315px;
+    }
+}
